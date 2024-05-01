@@ -10,9 +10,11 @@
 # BRAKERインストール
 
 - インストール
+  
 `git clone https://github.com/Gaius-Augustus/BRAKER.git`
 
 - 実行権限の付与
+  
 `cd [path_to_BRAKER]`
 
 `cd scripts`　ー＞　`chmod a+x *.pl *.py`
@@ -86,6 +88,7 @@
 
 # ProtHintのインストール
 `wget https://github.com/gatech-genemark/ProtHint/releases/download/v2.6.0/ProtHint-2.6.0.tar.gz`
+
 `tar xf ProtHint-2.6.0.tar.gz`
 
 # UTM上の共有Fの設定コマンド
@@ -96,24 +99,35 @@
 
 - BRAKER、GeneMark、AUGUSTUS、BAMTOOLS、TSEBRAのパス設定
 - スクリプトに追加する
+
 `export PATH=/path/to/BRAKER/scripts/:$PATH`
+
 `export PATH=/path/to/GeneMark-ETP/tools/:$PATH`
+
 `export GENEMARK_PATH=/path/to/GeneMark-ETP/bin`
+
 `export AUGUSTUS_CONFIG_PATH=/path/to/Augustus/config`
+
 `export AUGUSTUS_BIN_PATH=/path/to/Augustus/bin`
+
 `export AUGUSTUS_SCRIPTS_PATH=/path/to/Augustus/scripts`
+
 `export BAMTOOLS_PATH=/path/to/usr/bamtools/local/bin`
+
 `export TSEBRA_PATH=/path/to/TSEBRA/bin`
+
 `export PROTHINT_PATH=/path/to/ProtHint-2.6.0/bin`
 
 # Braker command
 
 - RNAseq
+
 `braker.pl --species=your_species --genome=${genome_path} --bam=${bam_data_path} --threads 8 --gff3`
 
 ![data](file/seq.png)
 
 - RNAseq + Protein.db
+
 `braker.pl --species=your_species --genome=${genome_path} --bam=${bam_data_path} --prot_seq=${protein_data_path}  --threads 8 --gff3`
 
 ![data2](file/seq_pro.png)
